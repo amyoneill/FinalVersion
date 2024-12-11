@@ -26,14 +26,12 @@ public class CoinSpawner : MonoBehaviour
         // Null check for spawnAreaCenter
         if (spawnAreaCenter == null)
         {
-            Debug.LogError("Spawn Area Center is not assigned!");
             return;
         }
 
         // Null check for coinPrefab
         if (coinPrefab == null)
         {
-            Debug.LogError("Coin prefab is not assigned!");
             return;
         }
 
@@ -58,7 +56,5 @@ public class CoinSpawner : MonoBehaviour
 
         // Destroy the coin after its lifetime
         Destroy(coin, coinLifetime);
-
-        Debug.Log($"Coin spawned at {spawnPosition}");
     }
 }

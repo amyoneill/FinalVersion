@@ -12,7 +12,7 @@ public class Timer : MonoBehaviour
 
         if (timeLimit <= 0)
         {
-            // Trigger Game Over logic
+            // Trigger Game Over
         }
 
         timerText.text = "Time: " + Mathf.CeilToInt(timeLimit);

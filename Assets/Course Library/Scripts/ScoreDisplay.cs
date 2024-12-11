@@ -3,19 +3,19 @@ using TMPro;
 
 public class ScoreDisplay : MonoBehaviour
 {
-    private int score = 0; // Initial score
-    public TextMeshProUGUI scoreText; // Reference to the TMP text element
+    private int score = 0; // Starting score
+    public TextMeshProUGUI scoreText; 
 
     void Start()
     {
-        UpdateScoreText(); // Initialize the score display
+        UpdateScoreText(); // Initialize score display
     }
 
     // Method to increase the score
     public void AddScore(int amount)
     {
-        score += amount; // Increment the score
-        UpdateScoreText(); // Update the UI
+        score += amount; // Increase the score
+        UpdateScoreText(); // Update UI
     }
 
     // Update the score text on the screen

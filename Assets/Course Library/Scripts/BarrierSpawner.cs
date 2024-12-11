@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class BarrierSpawner : MonoBehaviour
 {
-    public GameObject barrierPrefab;       // The barrier prefab
+    public GameObject barrierPrefab;       // barrier prefab
     public Transform spawnAreaCenter;     // Center of the road for spawning
     public float roadWidth = 200f;        // Width of the road
     public float spawnZOffset = 20f;      // Distance ahead of the spawner

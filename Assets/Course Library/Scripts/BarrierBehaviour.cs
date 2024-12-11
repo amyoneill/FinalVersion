@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class BarrierBehavior : MonoBehaviour
 {
-    public Transform player; // Reference to the player's Transform
-    public float checkDistance = 1f; // Distance tolerance for passing the player
+    public Transform player; // Reference to players transfomr
+    public float checkDistance = 1f; // tolerance for passing the player
 
     void Update()
     {
@@ -25,15 +25,15 @@ public class BarrierBehavior : MonoBehaviour
 
     void TriggerGameOver()
     {
-        // Find the GameManager and call its gameOver method
+        // Find GameManager and call gameOver method
         GameManager gameManager = FindObjectOfType<GameManager>();
         if (gameManager != null)
         {
-            gameManager.gameOver(); // Trigger the GameManager's game over logic
+            gameManager.gameOver(); 
         }
         else
         {
-            Debug.LogError("GameManager not found!");
+           
         }
     }
 }

@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public float moveSpeed = 10f;       // Speed of side-to-side movement
+    public float moveSpeed = 12f;       // Speed of movement
     public float laneWidth = 3.5f;     // Distance between lanes
     public float maxSideMovement = 5f; // Maximum horizontal range
 
@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        // Get player input (keyboard or joystick axis)
+        // player input 
         float input = Input.GetAxis("Horizontal");
 
         // Calculate target position
@@ -25,7 +25,7 @@ public class PlayerController : MonoBehaviour
         // Clamp the target position to stay within bounds
         targetX = Mathf.Clamp(targetX, -maxSideMovement, maxSideMovement);
 
-        // Smoothly move the car to the target position
+        // Smoothly move car to target position
         Vector3 newPosition = transform.position;
         newPosition.z = Mathf.Lerp(newPosition.z, targetX, Time.deltaTime * 10f);
         transform.position = newPosition;

@@ -6,7 +6,7 @@ public class CoinMovement : MonoBehaviour
 
     void Update()
     {
-        // Move the barrier away from the player along the Z-axis
+        // Move the coin towards the player
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }

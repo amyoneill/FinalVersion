@@ -7,7 +7,7 @@ public class Projectile : MonoBehaviour
 
     void Start()
     {
-        Destroy(gameObject, lifetime); // Destroy the bullet after a set time
+        Destroy(gameObject, lifetime); // Destroy bullet after a 3 secs
     }
 
     void Update()
@@ -21,8 +21,8 @@ public class Projectile : MonoBehaviour
         if (collision.gameObject.CompareTag("Barrier"))
         {
             // Destroy the projectile and the barrier
-            Destroy(collision.gameObject); // Destroy the barrier
-            Destroy(gameObject); // Destroy the projectile
+            Destroy(collision.gameObject); // Destroy barrier
+            Destroy(gameObject); // Destroy projectile
         }
     }
 }

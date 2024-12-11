@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class BarrierMovement : MonoBehaviour
 {
-    public float speed = 40f;  // Speed at which the barrier moves towards the player
+    public float speed = 40f;  // Speed of barrier
 
     void Update()
     {
-        // Move the barrier away from the player along the Z-axis
+        // Move the barrier towards player 
         transform.Translate(Vector3.forward * speed * Time.deltaTime);
     }
 }

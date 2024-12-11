@@ -4,13 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
-    public TextMeshProUGUI gameOverText; // Reference to the Game Over text
-    public GameObject returnToMenuButton; // Reference to the Return to Menu button
-    public float delayBeforeMainMenu = 3f; // Time to wait before auto-returning to the main menu
+    public TextMeshProUGUI gameOverText; // Game Over text
+    public GameObject returnToMenuButton; //Return to Menu button
+    public float delayBeforeMainMenu = 3f; // Time to wait before return to main menu
 
     void Start()
     {
-        // Ensure the game over UI is hidden at the start
+        // "game over" UI is hidden at the start
         if (gameOverText != null)
         {
             gameOverText.gameObject.SetActive(false);
@@ -23,19 +23,19 @@ public class GameManager : MonoBehaviour
 
     public void gameOver()
     {
-        // Show the Game Over text
+        // Show Game Over text
         if (gameOverText != null)
         {
             gameOverText.gameObject.SetActive(true);
         }
 
-        // Show the Return to Menu button
+        // Show Return to Menu button
         if (returnToMenuButton != null)
         {
             returnToMenuButton.SetActive(true);
         }
 
-        // Optionally stop the game
+        // stop the game
         Time.timeScale = 0; // Pause the game
         Debug.Log("Game Over!");
 
@@ -45,7 +45,7 @@ public class GameManager : MonoBehaviour
 
     public void ReturnToMainMenu()
     {
-        // Reset time scale and load the main menu scene
+        // Reset time scale and load main menu 
         Time.timeScale = 1; // Unpause the game
         SceneManager.LoadScene("MainMenu"); 
     }
