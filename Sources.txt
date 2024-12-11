@@ -1,0 +1,11 @@
+Bullet.prefab
+CoinGold.prefab
+https://assetstore.unity.com/packages/3d/props/simple-collectibles-pack-123092
+Assets unchanged from source
+
+From Create with code Prototype 1:
+	-Ground_Road.prefab
+	-Prop_Barrier02.prefab
+	-MountainSkybox.prefab
+	-SkyDome.prefab
+	-Veh_Armor_Car_01.prefab
